@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(./Images/header-image.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.logo {
+  max-width: 33%;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  font-size: 12px;
+  padding: 7px 20px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.language-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+}
+
+.language-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+/* media query for nav */
+
+@media (max-width: 510px) {
+  .logo {
+    min-width: 150px;
+    min-width: 50px;
+  }
+
+  nav button {
+    font-size: 10px;
+  }
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.header-content h1 {
+  font-size: 55px;
+  line-height: 70px;
+  font-weight: bolder;
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+/* media query for h1 */
+@media (max-width: 1000px) {
+  .header-content h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .header-content h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 510px) {
+  .header-content h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 410px) {
+  .header-content h1 {
+    font-size: 18px;
+  }
+}
+
+.header-content h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.header-content p {
+  font-size: 20px;
+}
+
+/* media query for h3 and p*/
+
+@media (max-width: 768px) {
+  .header-content h3 {
+    font-size: 18px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .header-content h3 {
+    font-size: 18px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 510px) {
+  .header-content h3 {
+    font-size: 16px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+  }
+}
+
+.signup-sec {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60%;
+}
+
+/* media query for signup section */
+
+@media (max-width: 1000px) {
+  .signup-sec {
+    width: 500px;
+  }
+}
+@media (max-width: 786px) {
+  .signup-sec {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 786px) {
+  .signup-sec {
+    width: 280px;
+  }
+}
+
+.email-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+/* media query for email signup section */
+
+@media (max-width: 768px) {
+  .email-signup {
+    flex-direction: column;
+  }
+}
+
+.email-signup input[type="email"] {
+  flex: 1;
+  background-color: transparent; /* Set background to transparent */
+  border: 1px solid #ccc; /* Optional: Custom border */
+  padding: 10px; /* Add padding for better look */
+  font-size: 16px; /* Set font size */
+  color: #333;
+  outline: none;
+  margin-right: 10px;
+  border-radius: 4px;
+  padding: 15px 30px;
+}
+
+.email-signup input[type="email"]::placeholder {
+  color: #aaa; /* Optional: Set placeholder text color */
+}
+
+.email-signup button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #db0001;
+  color: white;
+  border: 1px solid #db0001;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px 30px;
+}
+
+/* media query for email signup  button section */
+
+@media (max-width: 768px) {
+  .email-signup button {
+    margin-top: 20px;
+  }
+}
+
+.email-signup button:hover {
+  background-color: #db0009; /* Optional: Hover effect for button */
+}
+
+.thick-hr {
+  border: none; /* Remove the default border */
+  height: 8px; /* Set the height to 5px */
+  background-color: #2e2a2a; /* Set the color of the hr line */
+}
+
+/* --------fearturs----- */
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 48px 0px;
+}
+
+.text-col h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.text-col p {
+  font-size: 25px;
+}
+
+.row-2,
+.row-4 {
+  flex-direction: row-reverse;
+}
+
+/* ----media query for features */
+@media (max-width: 1200px) {
+  .features {
+    flex-direction: column; /* Change flex direction to column */
+    text-align: center;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .text-colh2 {
+    font-size: 38px;
+  }
+
+  .text-col p {
+    font-size: 22px;
+  }
+
+  .img-col img {
+    width: 400px;
+    padding-top: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .text-col h2 {
+    font-size: 28px;
+  }
+
+  .text-col p {
+    font-size: 18px;
+  }
+
+  .img-col img {
+    width: 300px;
+  }
+}
+@media (max-width: 510px) {
+  .text-col h2 {
+    font-size: 20px;
+  }
+
+  .text-col p {
+    font-size: 12px;
+  }
+
+  .img-col img {
+    width: 180px;
+  }
+}
+
+/*---------FAQ---------- */
+
+.faq {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.faq h2 {
+  font-weight: bolder;
+  font-size: 50px;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+
+.accordion {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  font-size: 28px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.content p {
+  font-size: 24px;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+
+/* ----media query for FAQ */
+
+@media (max-width: 768px) {
+  .faq h2 {
+    font-size: 38px;
+  }
+  .accordion li label {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 510px) {
+  .faq h2 {
+    font-size: 24px;
+  }
+  .accordion li label {
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+}
+
+label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.accordion .content {
+  background: #303030;
+  text-align: left;
+  padding: 0px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+/* -------Bottom-------- */
+
+.faq .email-signup {
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+
+.faq small {
+  font-size: 18px;
+}
+
+/* ----footer----- */
+
+.footer {
+  padding: 50px 15% 10px;
+  color: #777;
+}
+
+.footer h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.footer .col a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+}
+
+.footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .language-btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.footer .copyright {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Media Query */
+
+@media (max-width: 510px) {
+  .footer .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer h2 {
+    text-align: center;
+  }
+}
