@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
-    sans-serif;
+
   box-sizing: border-box;
 }
 
@@ -138,6 +137,11 @@ body > div.header > nav > div > button:nth-child(2):hover{
 /* media query for h3 and p*/
 
 @media (max-width: 768px) {
+
+  .header-content{
+    margin-top: 100px;
+  }
+
   .header-content h3 {
     font-size: 18px;
   }
@@ -166,17 +170,16 @@ body > div.header > nav > div > button:nth-child(2):hover{
 }
 
 .signup-sec {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+ 
 }
 
 /* media query for signup section */
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .signup-sec {
     width: 500px;
   }
@@ -190,7 +193,7 @@ body > div.header > nav > div > button:nth-child(2):hover{
   .signup-sec {
     width: 280px;
   }
-}
+} */
 
 .email-signup {
   display: flex;
