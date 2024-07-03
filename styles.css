@@ -212,6 +212,7 @@ body > div.header > nav > div > button:nth-child(2):hover{
 }
 
 .email-signup input[type="email"] {
+  color: #fff;
   flex: 1;
   background-color: transparent; /* Set background to transparent */
   border: 1px solid #ccc; /* Optional: Custom border */
@@ -222,6 +223,11 @@ body > div.header > nav > div > button:nth-child(2):hover{
   margin-right: 10px;
   border-radius: 4px;
   padding: 15px 30px;
+  
+}
+
+.email-signup input[type="email"] {
+  color: white !important;
 }
 
 .email-signup input[type="email"]::placeholder {
@@ -334,8 +340,9 @@ body > div.header > div > div > form > button:hover {
   }
 }
 
-/*---------FAQ---------- */
 
+
+/* --------FAQ---------- */
 .faq {
   padding: 10px 12%;
   text-align: center;
@@ -346,8 +353,7 @@ body > div.header > div > div > form > button:hover {
 .faq h2 {
   font-weight: bolder;
   font-size: 50px;
-  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
-    sans-serif;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
 
 .accordion {
@@ -356,58 +362,23 @@ body > div.header > div > div > form > button:hover {
   max-width: 1200px;
 }
 
-.accordion li {
-  list-style: none;
-  width: 100%;
-  padding: 5px;
+.accordion details {
+  margin-bottom: 10px;
 }
 
-.accordion li label {
+.accordion summary {
   display: flex;
   align-items: center;
   padding: 18px;
   font-size: 28px;
   font-weight: 500;
   background: #303030;
-  margin-bottom: 2px;
   cursor: pointer;
   position: relative;
+  user-select: none;
 }
 
-.content p {
-  font-size: 24px;
-  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
-    sans-serif;
-}
-
-/* ----media query for FAQ */
-
-@media (max-width: 768px) {
-  .faq h2 {
-    font-size: 38px;
-  }
-  .accordion li label {
-    font-size: 22px;
-  }
-
-  .content p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 510px) {
-  .faq h2 {
-    font-size: 24px;
-  }
-  .accordion li label {
-    font-size: 16px;
-  }
-
-  .content p {
-    font-size: 12px;
-  }
-}
-
-label::after {
+.accordion summary::after {
   content: "+";
   font-size: 34px;
   position: absolute;
@@ -415,26 +386,59 @@ label::after {
   transition: transform 0.5s;
 }
 
-input[type="radio"] {
-  display: none;
+.accordion details[open] summary::after {
+  transform: rotate(45deg);
 }
 
 .accordion .content {
   background: #303030;
   text-align: left;
-  padding: 0px 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s, padding 0.5s;
+  padding: 0 20px 30px;
+  font-size: 24px;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
 
-.accordion input[type="radio"]:checked + label + .content {
-  max-height: 600px;
-  padding: 30px 20px;
+/* ----media query for FAQ */
+@media (max-width: 768px) {
+  .faq h2 {
+      font-size: 38px;
+  }
+
+  .accordion summary {
+      font-size: 22px;
+  }
+
+  .accordion .content {
+      font-size: 16px;
+  }
 }
 
-.accordion input[type="radio"]:checked + label::after {
-  transform: rotate(135deg);
+@media (max-width: 510px) {
+  .faq h2 {
+      font-size: 24px;
+  }
+
+  .accordion summary {
+      font-size: 16px;
+  }
+
+  .accordion .content {
+      font-size: 12px;
+  }
+}
+
+/* -------Bottom-------- */
+.faq .email-signup {
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+
+body > div.faq > form > button:hover {
+  background-color: #aa1c1c;
+}
+
+.faq small {
+  font-size: 18px;
 }
 
 /* -------Bottom-------- */
