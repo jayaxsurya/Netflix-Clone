@@ -139,7 +139,7 @@ body > div.header > nav > div > button:nth-child(2):hover{
 @media (max-width: 768px) {
 
   .header-content{
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .header-content h3 {
